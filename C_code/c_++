@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+// 1. Қарапайым функция: екі санның көбейтіндісі
+int multiply(int a, int b) {
+    return a * b;
+}
+
+// 2.1 Рекурсив функция: факториал
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// 2.2 Рекурсив функция: Фибоначчи
+int fibonacci(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// 2.3 Рекурсив функция: санның цифрлар қосындысы
+int digitSum(int n) {
+    if (n == 0) return 0;
+    return (n % 10) + digitSum(n / 10);
+}
+
+int main() {
+    int a, b, n;
+
+    // Көбейтінді
+    cout << "Eki san engiziniz (a b): ";
+    cin >> a >> b;
+    cout << "Kobeytindisi: " << multiply(a, b) << endl;
+
+    // Факториал
+    cout << "Faktorial uchun san engiziniz: ";
+    cin >> n;
+    cout << n << "! = " << factorial(n) << endl;
+
+    // Фибоначчи
+    cout << "Fibonacci uchun n engiziniz: ";
+    cin >> n;
+    cout << "Fibonacci(" << n << ") = " << fibonacci(n) << endl;
+
+    // Цифрлар қосындысы
+    cout << "San engiziniz (digit sum): ";
+    cin >> n;
+    cout << "San cifrlarynyn kosyndysy: " << digitSum(n) << endl;
+
+    return 0;
+}
