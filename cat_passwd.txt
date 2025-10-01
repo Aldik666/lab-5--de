@@ -1,0 +1,5 @@
+execve("/bin/cat", ["cat", "/etc/passwd"], 0x7ffd...) = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY) = 3
+read(3, "root:x:0:0:root:/root:/bin/bash\n", 4096) = 33
+write(1, "root:x:0:0:root:/root:/bin/bash\n", 33) = 33
+close(3) = 0

@@ -1,0 +1,5 @@
+execve("/bin/ls", ["ls"], 0x7ffd...) = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents64(3, /* 5 entries */, 32768) = 120
+write(1, "file_ops.c\n", 11) = 11
+close(3) = 0

@@ -1,0 +1,4 @@
+execve("/bin/touch", ["touch", "newfile.txt"], 0x7ffd...) = 0
+openat(AT_FDCWD, "newfile.txt", O_WRONLY|O_CREAT|O_NOCTTY|O_NONBLOCK, 0666) = 3
+close(3) = 0
+futimens(3, NULL) = 0
